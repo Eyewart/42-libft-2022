@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/08 18:56:34 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/09 14:16:16 by Hassan           ###   ########.fr       */
+/*   Created: 2022/01/09 16:07:51 by hrifi-la          #+#    #+#             */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memchr(const void *s, int c, size_t size)
-{
-	unsigned char *ptr = (unsigned char*)s;
+#include "libft.h"
 
-	while (size-- && s != 0)
+char	*ft_strchr(const char *s, int c)
+{
+	char *str;
+	char ch;
+	int i;
+	
+	ch = (char) c;
+	str = (char *) s;
+	i = 0;
+	while (str[i] != 0)
 	{
-		if (*ptr == c)
-			return (ptr);
-		ptr++;
+		if (str[i] == ch)
+			return (&str[i]);
+		i++;
 	}
+	if (str[i] == ch) // in case c == '/0'
+		return (&str[i]);
 	return (0);
 }

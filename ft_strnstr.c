@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strnstr.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 01:10:05 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/09 14:15:31 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strnstr(const char *s, const char *to_find, size_t len)
+#include "libft.h"
+
+char	*ft_strnstr(const char *s, const char *to_find, size_t len)
 {
 	char *str;
 	int i;

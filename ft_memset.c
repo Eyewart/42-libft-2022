@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   tolower.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/09 00:16:20 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/09 14:15:18 by Hassan           ###   ########.fr       */
+/*   Created: 2021/03/10 16:41:44 by hrifi-la          #+#    #+#             */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int tolower (int c)
+#include "libft.h"
+
+void *ft_memset(void *pointer, int value, size_t count)
 {
-	if ( 'A' <= c <= 'Z' )
-		return (c + 32);
-	return (c);
+	unsigned char *ptr;
+	ptr = pointer;
+
+	while (pointer && count)
+	{
+		*ptr++ = value;
+		count--;
+	}
+	return (pointer);
 }

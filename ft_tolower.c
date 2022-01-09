@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bzero.c                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/10 16:41:44 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/09 14:15:47 by Hassan           ###   ########.fr       */
+/*   Created: 2022/01/09 00:16:20 by Hassan            #+#    #+#             */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *bzero(void *pointer, size_t count)
-{
-	unsigned char *ptr;
-	ptr = pointer;
+#include "libft.h"
 
-	while (pointer && count)
-	{
-		*ptr++ = '/0';
-		count--;
-	}
-	return (pointer);
+int	ft_tolower (int c)
+{
+	if ( 'A' <= c <= 'Z' )
+		return (c + 32);
+	return (c);
 }

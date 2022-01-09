@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   islapha.c                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/08 17:20:19 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/09 14:14:43 by Hassan           ###   ########.fr       */
+/*   Created: 2022/01/09 00:16:20 by Hassan            #+#    #+#             */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(int character)
+#include "libft.h"
+
+int	ft_toupper (int c)
 {
-	if (character >= 'a' && character <= 'z')
-		return (1);
-	else if (character >= 'A' && character <= 'Z')
-		return (1);
-	return (0);
+	if ( 'a' <= c <= 'z' )
+		return (c - 32);
+	return (c);
 }

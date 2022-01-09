@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 19:58:42 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/09 14:16:02 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	is_space(char c)
 {
@@ -17,7 +19,7 @@ int	is_space(char c)
 	return (0);
 }
 
-int	atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int sign;
