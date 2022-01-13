@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:50:18 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/09 17:06:44 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/11 23:57:47 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int				ft_atoi(const char *str);
 void			*ft_bzero(void *pointer, size_t count);
 void			*ft_calloc(size_t num, size_t size);
+char			*ft_strdup(const char	*str1);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
@@ -38,5 +40,8 @@ char			*ft_strnstr(const char *s, const char *to_find, size_t len);
 char			*ft_strrchr(const char *s, int c);
 int				ft_tolower (int c);
 int				ft_toupper (int c);
+char			*ft_strtrim(char const *s1, char const *set);
+char			**ft_split(char const *s, char c);
+
 
 #endif
