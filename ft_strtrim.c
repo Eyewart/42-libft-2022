@@ -6,16 +6,16 @@
 /*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:49:13 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/10 23:10:26 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/16 13:36:59 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	find_start (const char *str, const char *set)
+static int	find_start(const char *str, const char *set)
 {
-	int i;
-	int s;
+	int	i;
+	int	s;
 
 	i = 0;
 	s = 0;
@@ -24,7 +24,7 @@ int	find_start (const char *str, const char *set)
 		while (set[i])
 		{
 			if (str[s] == set[i])
-				break;
+				break ;
 			i++;
 		}
 		if (set[i] == 0)
@@ -35,10 +35,10 @@ int	find_start (const char *str, const char *set)
 	return (s);
 }
 
-int	find_end (const char *str, const char *set)
+static int	find_end(const char *str, const char *set)
 {
-	int i;
-	int e;
+	int	i;
+	int	e;
 
 	e = ft_strlen(str) - 1;
 	i = 0;
@@ -47,7 +47,7 @@ int	find_end (const char *str, const char *set)
 		while (set[i])
 		{
 			if (str[e] == set[i])
-				break;
+				break ;
 			i++;
 		}
 		if (set[i] == 0)
@@ -72,10 +72,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (start > end)
 		return (ft_strdup(""));
 	size = (end - start) + 2;
-	/*printf("%c\n", s1[start]);
-	printf("%c\n", s1[end]);
-	printf("%d\n", size);*/
-	ptr = malloc(sizeof(*s1) * size); 
+	ptr = malloc(sizeof(*s1) * size);
 	if (ptr == 0)
 		return (0);
 	ft_strlcpy ((char *)ptr, (char *)&s1[start], size);

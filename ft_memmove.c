@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 22:15:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/16 12:33:08 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
-	char *ptr_d;
-	char *ptr_s;
+	char	*ptr_d;
+	char	*ptr_s;
 
 	if (src == 0 || dest == 0)
 		return (dest);

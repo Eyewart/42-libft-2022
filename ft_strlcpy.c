@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:06:03 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/09 16:26:41 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/17 12:09:16 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_strncpy(char *dest, char *src, unsigned int n)
+static char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (i < n && src[i] != '\0')
@@ -30,10 +30,10 @@ char			*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int c;
-	unsigned int d;
+	unsigned int	c;
+	unsigned int	d;
 
 	c = 0;
 	d = 0;

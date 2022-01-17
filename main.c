@@ -1,8 +1,29 @@
 #include "libft.h"
 #include <stdio.h>
 
+//ft_itoa
+
+/*int main(void)
+{
+    int    min = -2147483648;
+    int    max = 2147483647;
+    int   i1 = 0;
+    int   i2 = 45;
+    int    i3 = 1000;
+    int    i4 = 1010;
+    int    i5 = 1001;
+    printf("%s\n", ft_itoa(min));
+    printf("%s\n", ft_itoa(max));
+    printf("%s\n", ft_itoa(i1));
+    printf("%s\n", ft_itoa(i2));
+    printf("%s\n", ft_itoa(i3));
+    printf("%s\n", ft_itoa(i4));
+    printf("%s\n", ft_itoa(i5));
+    return (0);
+}*/
+
 //ft_split
-void    display_and_free(char **str)
+/*void    display_and_free(char **str)
 {
 	int i;
 	i = 0;
@@ -28,14 +49,14 @@ int main(void)
     char    *s2 = "hello++blabla+fld++";
     char    *s3 = "hello++blabla+fld";
     char    *s4 = "+++";
-    /*display_and_free(ft_split(s1, '+'));
+    display_and_free(ft_split(s1, '+'));
     display_and_free(ft_split(s1, 0));
     display_and_free(ft_split(s2, '+'));
     display_and_free(ft_split(s3, '+')); 
-    display_and_free(ft_split(s4, '+'));*/
+    display_and_free(ft_split(s4, '+'));
     display_and_free(ft_split(s3, '+'));
     return (0);
-}
+}*/
 
 /*ft_strtrim
 void    display_and_free(char *str)
