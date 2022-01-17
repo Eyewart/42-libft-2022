@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 18:34:51 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/16 13:10:32 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 18:08:09 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (str == 0)
 		return (0);
 	i = 0;
+	j = 0;
 	while (s1[i])
 	{
 		str[i] = s1[i];

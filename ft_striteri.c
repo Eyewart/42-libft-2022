@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 17:04:07 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/16 17:51:45 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 18:23:20 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
-	
+
 	i = 0;
 	if (!s || !f)
 		return (NULL);

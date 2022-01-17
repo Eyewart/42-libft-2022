@@ -1,8 +1,62 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/17 18:23:30 by hrifi-la          #+#    #+#             */
+/*   Updated: 2022/01/17 21:52:22 by hrifi-la         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
+
+//memmove
+int main()
+{
+    char str1[] = "GeeksBla"; // Array of size 100
+    puts("str1 before memmove \n");
+    puts(str1);
+  
+    /* Copies contents of str2 to sr1 */
+  
+	/*printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n\n", memmove(str1, &str1[2], 5));*/
+
+    printf("ft_memmove: %s\n", ft_memmove(&str1[2], &str1[1], 4));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n\n", memmove(&str1[2], &str1[1], 4));
+
+	/*printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n", memmove(str1, &str1[2], 5));
+
+	printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n", memmove(str1, &str1[2], 5));*/
+  
+    return 0;
+}
+
+//memset
+/*
+int main()
+{
+    char str[50] = "GeeksForGeeks is for programming geeks.";
+    printf("\nBefore memset(): %s\n", str);
+  
+    // Fill 8 characters starting from str[13] with '.'
+    ft_memset(NULL, 0, 5);
+  
+    printf("After memset():  %s", str);
+    return 0;
+}*/
 
 //ft_itoa
-
 /*int main(void)
 {
     int    min = -2147483648;

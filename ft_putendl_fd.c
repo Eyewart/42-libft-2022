@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 19:04:09 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/16 19:07:10 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 18:22:45 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n');
+	ft_putchar_fd('\n', fd);
 }

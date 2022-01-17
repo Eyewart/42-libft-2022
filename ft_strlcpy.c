@@ -3,46 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 16:06:03 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/17 12:09:16 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 23:35:49 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*ft_strncpy(char *dest, char *src, unsigned int n)
+size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
+	if (!size)
+		return (ft_strlen(src));
+	if (size > ft_strlen(src))
+	{
+		while (src[i])
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = 0;
+		return (ft_strlen(src));
+	}
+	while (i < (size - 1))
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	c;
-	unsigned int	d;
-
-	c = 0;
-	d = 0;
-	while (src[c])
-		c++;
-	while (dest[d])
-		d++;
-	ft_strncpy(dest, src, size);
-	if (size != 0)
-		dest[size - 1] = 0;
-	return (c);
+	dest[i] = 0;
+	return (ft_strlen(src));
 }

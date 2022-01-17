@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 18:39:40 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/16 18:55:40 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 18:22:41 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h" 
+
 void	ft_putchar_fd(char c, int fd)
 {
-
 	write(fd, &c, 1);
 }

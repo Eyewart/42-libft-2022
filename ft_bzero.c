@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:55:18 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/15 19:17:09 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 20:04:27 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	*ft_bzero(void *pointer, size_t count)
 	unsigned char	*ptr;
 
 	ptr = pointer;
-	while (pointer && count)
+	while (count)
 	{
-		*ptr++ = '/0';
+		*ptr++ = '\0';
 		count--;
 	}
 	return (pointer);
