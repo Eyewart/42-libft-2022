@@ -6,14 +6,15 @@
 /*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 16:44:35 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/16 17:49:42 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/17 14:55:30 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	char	*s_final;
+
 
 	if (!s || !f)
 		return (NULL);
