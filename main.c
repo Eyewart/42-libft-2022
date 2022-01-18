@@ -3,60 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:23:30 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/17 21:52:22 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/18 11:56:04 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
-//memmove
-int main()
-{
-    char str1[] = "GeeksBla"; // Array of size 100
-    puts("str1 before memmove \n");
-    puts(str1);
-  
-    /* Copies contents of str2 to sr1 */
-  
-	/*printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
-	ft_memcpy(&str1[0], "GeeksBla", 8);
-	printf("memmove: %s\n\n", memmove(str1, &str1[2], 5));*/
-
-    printf("ft_memmove: %s\n", ft_memmove(&str1[2], &str1[1], 4));
-	ft_memcpy(&str1[0], "GeeksBla", 8);
-	printf("memmove: %s\n\n", memmove(&str1[2], &str1[1], 4));
-
-	/*printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
-	ft_memcpy(&str1[0], "GeeksBla", 8);
-	printf("memmove: %s\n", memmove(str1, &str1[2], 5));
-
-	printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
-	ft_memcpy(&str1[0], "GeeksBla", 8);
-	printf("memmove: %s\n", memmove(str1, &str1[2], 5));*/
-  
-    return 0;
-}
-
-//memset
-/*
-int main()
-{
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
-  
-    // Fill 8 characters starting from str[13] with '.'
-    ft_memset(NULL, 0, 5);
-  
-    printf("After memset():  %s", str);
-    return 0;
-}*/
-
-//ft_itoa
+//ft_atoi
 /*int main(void)
 {
     int    min = -2147483648;
@@ -75,6 +34,67 @@ int main()
     printf("%s\n", ft_itoa(i5));
     return (0);
 }*/
+
+//memmove
+/*int main()
+{
+    char str1[] = "GeeksBla"; // Array of size 100
+    puts("str1 before memmove \n");
+    puts(str1);
+  
+    // Copies contents of str2 to sr1 
+  
+	printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n\n", memmove(str1, &str1[2], 5));
+
+    printf("ft_memmove: %s\n", ft_memmove(&str1[2], &str1[1], 4));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n\n", memmove(&str1[2], &str1[1], 4));
+
+	printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n", memmove(str1, &str1[2], 5));
+
+	printf("ft_memmove: %s\n", ft_memmove(str1, &str1[2], 5));
+	ft_memcpy(&str1[0], "GeeksBla", 8);
+	printf("memmove: %s\n", memmove(str1, &str1[2], 5));
+  
+    return 0;
+}*/
+
+//memset
+/*
+int main()
+{
+    char str[50] = "GeeksForGeeks is for programming geeks.";
+    printf("\nBefore memset(): %s\n", str);
+  
+    // Fill 8 characters starting from str[13] with '.'
+    ft_memset(NULL, 0, 5);
+  
+    printf("After memset():  %s", str);
+    return 0;
+}*/
+
+//ft_itoa
+int main(void)
+{
+    int    min = -2147483648;
+    int    max = -5859;
+    int   i1 = 0;
+    int   i2 = 45;
+    int    i3 = 1000;
+    int    i4 = 1010;
+    int    i5 = 1001;
+    char    *s = "1500";
+
+    printf("%s", );
+    //printf("%d\n", sizeof(ft_itoa(max)));
+    printf("%s\n", ft_itoa(max));
+
+    return (0);
+}
 
 //ft_split
 /*void    display_and_free(char **str)

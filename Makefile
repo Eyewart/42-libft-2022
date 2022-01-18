@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+         #
+#    By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/17 18:02:46 by hrifi-la          #+#    #+#              #
-#    Updated: 2022/01/17 18:18:28 by hrifi-la         ###   ########.fr        #
+#    Updated: 2022/01/18 01:39:23 by Hassan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,6 @@ ft_isdigit.c \
 ft_memmove.c \
 ft_strdup.c \
 ft_strrchr.c \
-#ft_strmapi.c \
 
 SRC2 = ft_lstmap.c \
 ft_lstnew.c \

@@ -6,7 +6,7 @@
 /*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 23:02:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/17 15:49:45 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/18 11:56:04 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ static char	*tab_rev(char *tab1, int n, int i)
 	char	*tab2;
 	int		j;
 
+	printf("size: %d", sizeof(tab1));
 	tab2 = malloc (sizeof(char) * (ft_strlen(tab1) + 1));
 	if (!tab2)
 		return (NULL);
@@ -57,5 +58,6 @@ char	*ft_itoa(int n)
 		nb = (nb - val) / 10;
 	}
 	tab_r = tab_rev(tab, n, i);
+	free(tab);
 	return (tab_r);
 }
