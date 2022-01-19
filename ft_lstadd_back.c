@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 13:19:36 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/19 19:58:59 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/19 20:10:55 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,15 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*temp;
-
 	if (!new || !lst)
 		return ;
-	temp = *lst;
-	if (!temp)
+
+	if (new)
 	{
-		new->next = *lst;
-		*lst = new;
-		return ;
+		if (*lst)
+			ft_lstlast(*lst)->next = new;
+		else
+			*lst = new;
 	}
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
-	new->next = 0;
 }
+
