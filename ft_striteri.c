@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/16 17:04:07 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/17 18:23:20 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/18 23:57:40 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	if (!s || !f)
-		return (NULL);
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);

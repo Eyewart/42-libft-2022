@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:49:13 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/16 13:36:59 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/19 00:58:59 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,16 @@ static int	find_end(const char *str, const char *set)
 	return (e);
 }
 
+static char		*empty_str(void)
+{
+	char	*s0;
+
+	s0 = malloc(sizeof(char));
+	if (s0)
+		s0[0] = 0;
+	return (s0);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	const char	*ptr;
@@ -70,7 +80,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = find_start (s1, set);
 	end = find_end (s1, set);
 	if (start > end)
-		return (ft_strdup(""));
+		return (empty_str());
 	size = (end - start) + 2;
 	ptr = malloc(sizeof(*s1) * size);
 	if (ptr == 0)

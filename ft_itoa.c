@@ -3,36 +3,55 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 23:02:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/18 11:56:04 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/19 00:57:26 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	size_tab(int n)
+{
+	int	val;
+	int	i;
+
+	i = 0;
+	val = n;
+	if (val == 0)
+		i++;
+	while (val)
+	{
+		val = val / 10;
+		i++;
+	}
+	if (n < 0)
+		return (i + 2);
+	else
+		return (i + 1);
+}
+
 static char	*tab_rev(char *tab1, int n, int i)
 {
 	char	*tab2;
 	int		j;
+	int		sign;
 
-	printf("size: %d", sizeof(tab1));
-	tab2 = malloc (sizeof(char) * (ft_strlen(tab1) + 1));
+	sign = 0;
+	if (n < 0)
+		sign++;
+	tab2 = malloc (sizeof(char) * size_tab(n));
 	if (!tab2)
 		return (NULL);
-	if (n == 0)
-		tab2[0] = '0';
 	j = 0;
-	if (n < 0)
-	{
-		tab2[j] = '-';
-		j++;
-	}
+	if (n == 0)
+		tab2[j++] = '0';
+	if (sign)
+		tab2[j++] = '-';
 	while (i > 0)
 		tab2[j++] = tab1[--i];
-	if (n != 0)
-		tab2[j] = 0;
+	tab2[j] = 0;
 	return (tab2);
 }
 
@@ -46,7 +65,7 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	nb = n;
-	tab = malloc (sizeof(char) * 20);
+	tab = malloc (sizeof(char) * size_tab(n));
 	if (!tab)
 		return (NULL);
 	if (n < 0)

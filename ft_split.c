@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 20:18:16 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/17 20:20:58 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/18 23:39:38 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,25 @@ static int	size_tab(char const *string, char c)
 	return (size);
 }
 
+static char	*malloc_string(int len, char **tab_str, int j)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = malloc (sizeof(char) * (len + 1));
+	if (!str)
+	{
+		while (i < j)
+		{
+			free(tab_str[i]);
+			i++;
+		}
+		return (0);
+	}
+	return (str);
+}
+
 static char	**run_split(char const *s, char c, int i, int j)
 {
 	int		str_l;
@@ -38,8 +57,8 @@ static char	**run_split(char const *s, char c, int i, int j)
 	int		k;
 
 	tab_strings = malloc(sizeof(tab_strings) * (size_tab(s, c) + 1));
-		if (!tab_strings)
-			return (NULL);
+	if (!tab_strings)
+		return (NULL);
 	while (s && s[i])
 	{
 		while (s[i] == c)
@@ -49,9 +68,7 @@ static char	**run_split(char const *s, char c, int i, int j)
 			str_l++;
 		if (str_l == 0)
 			break ;
-		tab_strings[j] = malloc(sizeof(char) * (str_l + 1));
-		if (!tab_strings[j])
-			return (NULL);
+		tab_strings[j] = malloc_string(str_l, tab_strings, j);
 		k = 0;
 		while (k < str_l && str_l != 0)
 			*(tab_strings[j] + k++) = s[i++];

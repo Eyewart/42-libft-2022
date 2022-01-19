@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:23:30 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/18 11:56:04 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/19 00:46:56 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,49 @@
 #include <string.h>
 #include <stdlib.h>
 
-//ft_atoi
+void    display_and_free(char *str)
+{
+    if (str)
+        printf("%d\n", str[0]);
+    else
+        printf("(null)\n");
+    free(str);
+}
+
+int main(void)
+{
+    char    *s1 = "        ";
+    char    *s2 = "M";
+    char    *s3 = "+=+-=-+-=";
+    char    *s4 = "0123some text 456 and some more789";
+    char    *s5 = "x";
+    //display_and_free(ft_strtrim(s1, "M"));
+    display_and_free(ft_strtrim(s1, " "));
+    /*display_and_free(ft_strtrim(s1, "Ma"));
+    display_and_free(ft_strtrim(s1, s1)); // OK
+    display_and_free(ft_strtrim(s1, ""));
+    display_and_free(ft_strtrim(s1, NULL));
+    display_and_free(ft_strtrim(s2, s1));
+    display_and_free(ft_strtrim(s2, s2));
+    display_and_free(ft_strtrim(s3, "+="));
+    display_and_free(ft_strtrim(s4, "0123456789"));
+    display_and_free(ft_strtrim(s4, s5));
+    display_and_free(ft_strtrim(s5, "")); // to review
+    display_and_free(ft_strtrim(s5, s1));
+    display_and_free(ft_strtrim(s5, s5));
+    display_and_free(ft_strtrim(NULL, "0123456789"));
+    display_and_free(ft_strtrim(NULL, NULL));*/
+    return (0);
+}
+
+//ft_substr
 /*int main(void)
 {
-    int    min = -2147483648;
-    int    max = 2147483647;
-    int   i1 = 0;
-    int   i2 = 45;
-    int    i3 = 1000;
-    int    i4 = 1010;
-    int    i5 = 1001;
-    printf("%s\n", ft_itoa(min));
-    printf("%s\n", ft_itoa(max));
-    printf("%s\n", ft_itoa(i1));
-    printf("%s\n", ft_itoa(i2));
-    printf("%s\n", ft_itoa(i3));
-    printf("%s\n", ft_itoa(i4));
-    printf("%s\n", ft_itoa(i5));
+    char s1[] = "helloworld";
+	unsigned int start = 2;
+	unsigned int len = 3;
+
+    printf("%s\n", ft_substr(s1, start, len));
     return (0);
 }*/
 
@@ -78,10 +104,10 @@ int main()
 }*/
 
 //ft_itoa
-int main(void)
+/*int main(void)
 {
     int    min = -2147483648;
-    int    max = -5859;
+    int    max = -58965;
     int   i1 = 0;
     int   i2 = 45;
     int    i3 = 1000;
@@ -89,12 +115,11 @@ int main(void)
     int    i5 = 1001;
     char    *s = "1500";
 
-    printf("%s", );
     //printf("%d\n", sizeof(ft_itoa(max)));
     printf("%s\n", ft_itoa(max));
 
     return (0);
-}
+}*/
 
 //ft_split
 /*void    display_and_free(char **str)
@@ -132,38 +157,4 @@ int main(void)
     return (0);
 }*/
 
-/*ft_strtrim
-void    display_and_free(char *str)
-{
-    if (str)
-        printf("%s\n", str);
-    else
-        printf("(null)\n");
-    free(str);
-}
-
-int main(void)
-{
-    char    *s1 = "Mamamia";
-    char    *s2 = "";
-    char    *s3 = "+=+-=-+-=";
-    char    *s4 = "0123some text 456 and some more789";
-    char    *s5 = "x";
-    display_and_free(ft_strtrim(s1, "M"));
-    display_and_free(ft_strtrim(s1, "a"));
-    display_and_free(ft_strtrim(s1, "Ma"));
-    display_and_free(ft_strtrim(s1, s1)); // OK
-    display_and_free(ft_strtrim(s1, ""));
-    display_and_free(ft_strtrim(s1, NULL));
-    display_and_free(ft_strtrim(s2, s1));
-    display_and_free(ft_strtrim(s2, s2));
-    display_and_free(ft_strtrim(s3, "+="));
-    display_and_free(ft_strtrim(s4, "0123456789"));
-    display_and_free(ft_strtrim(s4, s5));
-    display_and_free(ft_strtrim(s5, "")); // to review
-    display_and_free(ft_strtrim(s5, s1));
-    display_and_free(ft_strtrim(s5, s5));
-    display_and_free(ft_strtrim(NULL, "0123456789"));
-    display_and_free(ft_strtrim(NULL, NULL));
-    return (0);
-}*/
+//ft_strtrim
