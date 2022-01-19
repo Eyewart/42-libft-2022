@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:49:13 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/19 12:58:38 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/19 19:43:43 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ static int	find_start(const char *str, const char *set)
 			i++;
 		}
 		if (set[i] == 0)
-			return (s);
+			return (s - 1);
+		if (s == ((int)ft_strlen(str) - 1))
+			break ;
 		i = 0;
 		s++;
 	}
@@ -51,7 +53,7 @@ static int	find_end(const char *str, const char *set)
 			i++;
 		}
 		if (set[i] == 0)
-			return (e);
+			return (e + 1);
 		i = 0;
 		if (e == 0)
 			break ;
@@ -67,7 +69,7 @@ static char	*empty_str(void)
 	s0 = malloc(sizeof(char));
 	if (!s0)
 		s0 = NULL;
-	s0[0] = '0';
+	s0[0] = 0;
 	return (s0);
 }
 
@@ -82,14 +84,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	start = find_start (s1, set);
 	end = find_end (s1, set);
-	printf("%d\n", start);
-	printf("%d\n", end);
-	if (start >= end)
+	if (start > end)
 		return (empty_str());
-	size = (end - start) + 2;
+	size = (end - start);
 	ptr = malloc(sizeof(*s1) * size);
 	if (ptr == 0)
 		return (0);
-	ft_strlcpy ((char *)ptr, (char *)&s1[start], size);
+	ft_strlcpy ((char *)ptr, (char *)&s1[start + 1], size);
 	return ((char *)ptr);
 }

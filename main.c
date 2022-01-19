@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:23:30 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/19 00:46:56 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/19 18:57:31 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 void    display_and_free(char *str)
 {
     if (str)
-        printf("%d\n", str[0]);
+        printf("%s\n", str);
     else
         printf("(null)\n");
     free(str);
@@ -26,13 +26,13 @@ void    display_and_free(char *str)
 
 int main(void)
 {
-    char    *s1 = "        ";
-    char    *s2 = "M";
+    char    *s1 = "xxxbxxx";
+    /*char    *s2 = "M";
     char    *s3 = "+=+-=-+-=";
     char    *s4 = "0123some text 456 and some more789";
-    char    *s5 = "x";
+    char    *s5 = "x";*/
     //display_and_free(ft_strtrim(s1, "M"));
-    display_and_free(ft_strtrim(s1, " "));
+    display_and_free(ft_strtrim(s1, ""));
     /*display_and_free(ft_strtrim(s1, "Ma"));
     display_and_free(ft_strtrim(s1, s1)); // OK
     display_and_free(ft_strtrim(s1, ""));

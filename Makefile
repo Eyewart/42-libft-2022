@@ -38,13 +38,14 @@ ft_memcmp.c \
 ft_split.c \
 ft_strncmp.c \
 ft_isascii.c \
-ft_memcpy.c \
 ft_strchr.c \
 ft_strnstr.c \
 ft_isdigit.c \
 ft_memmove.c \
 ft_strdup.c \
 ft_strrchr.c \
+ft_strmapi.c \
+ft_striteri.c \
 
 SRC2 = ft_lstmap.c \
 ft_lstnew.c \
