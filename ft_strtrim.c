@@ -6,7 +6,7 @@
 /*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 20:49:13 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/19 12:24:16 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/19 12:58:38 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ static int	find_end(const char *str, const char *set)
 	return (e);
 }
 
-static char		*empty_str(void)
+static char	*empty_str(void)
 {
 	char	*s0;
 

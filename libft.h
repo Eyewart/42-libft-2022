@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:50:18 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/19 00:04:39 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/19 13:17:11 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *pointer, int value, size_t count);
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
-size_t	ft_strlcpy(char *dest, char *src, unsigned int size);
+size_t	ft_strlcpy(char *dest, const char *src, unsigned int size);
 size_t	ft_strlen(const char *c);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *s, const char *to_find, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
