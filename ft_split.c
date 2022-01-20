@@ -6,7 +6,7 @@
 /*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 20:18:16 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/20 13:24:28 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/20 13:59:44 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,9 @@ static char	*malloc_string(int len, char **tab_str, int j)
 	return (str);
 }
 
-static char	**malloc_tab(char const *s, char c)
+static void	**malloc_tab(char **tab_strings, char const *s, char c)
 {
-	char **tab_s;
-	
-	tab_s = malloc(sizeof(tab_s) * (size_tab(s, c) + 1));
-	if (!tab_s)
-		return (NULL);
-	return (tab_s);
+	*tab_strings = malloc(sizeof(tab_strings) * (size_tab(s, c) + 1));
 }
 
 static char	**run_split(char const *s, char c, int i, int j)
@@ -67,7 +62,7 @@ static char	**run_split(char const *s, char c, int i, int j)
 	char	**tab_strings;
 	int		k;
 
-	if(!(tab_strings = malloc_tab(s, c)))
+	if(!(malloc_tab(&tab_strings, s, c)))
 		return (NULL); 
 	while (s && s[i])
 	{
