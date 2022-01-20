@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 20:18:16 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/20 13:59:44 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/20 17:02:46 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,19 +51,21 @@ static char	*malloc_string(int len, char **tab_str, int j)
 	return (str);
 }
 
-static void	**malloc_tab(char **tab_strings, char const *s, char c)
+int	malloc_tab(char ***tab_strings, char const *s, char c)
 {
-	*tab_strings = malloc(sizeof(tab_strings) * (size_tab(s, c) + 1));
+	*tab_strings = malloc(sizeof(*tab_strings) * (size_tab(s, c) + 1));
+	if (!*tab_strings)
+		return (0);
+	return (1);
 }
 
-static char	**run_split(char const *s, char c, int i, int j)
+static char	**run_split(char const *s, char c, int i, char **tab_strings)
 {
-	int		str_l;
-	char	**tab_strings;
-	int		k;
+	int	str_l;
+	int	k;
+	int	j;
 
-	if(!(malloc_tab(&tab_strings, s, c)))
-		return (NULL); 
+	j = 0;
 	while (s && s[i])
 	{
 		while (s[i] == c)
@@ -75,7 +77,7 @@ static char	**run_split(char const *s, char c, int i, int j)
 			break ;
 		tab_strings[j] = malloc_string(str_l, tab_strings, j);
 		if (!tab_strings[j])
-			return NULL;
+			return (NULL);
 		k = 0;
 		while (k < str_l && str_l != 0)
 			*(tab_strings[j] + k++) = s[i++];
@@ -88,7 +90,12 @@ static char	**run_split(char const *s, char c, int i, int j)
 
 char	**ft_split(char const *s, char c)
 {
+	char	**tab_strings;
+
+	tab_strings = 0;
 	if (!s)
 		return (NULL);
-	return (run_split(s, c, 0, 0));
+	if (!(malloc_tab(&tab_strings, s, c)))
+		return (NULL);
+	return (run_split(s, c, 0, tab_strings));
 }

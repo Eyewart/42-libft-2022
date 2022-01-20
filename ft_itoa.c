@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
+/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 23:02:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/20 12:17:03 by Hassan           ###   ########.fr       */
+/*   Updated: 2022/01/20 17:15:39 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*tab_rev(char *tab1, int n, int i)
 	sign = 0;
 	if (n < 0)
 		sign++;
-	tab2 = malloc (sizeof(char) * size_tab(n));
+	tab2 = malloc(sizeof(char) * size_tab(n));
 	if (!tab2)
 		return (NULL);
 	j = 0;
@@ -65,7 +65,7 @@ char	*ft_itoa(int n)
 
 	i = 0;
 	nb = n;
-	tab = malloc (sizeof(char) * size_tab(n));
+	tab = malloc(sizeof(char) * size_tab(n));
 	if (!tab)
 		return (NULL);
 	if (n < 0)

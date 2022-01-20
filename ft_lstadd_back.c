@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 13:19:36 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/19 20:10:55 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/20 16:56:08 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!new || !lst)
 		return ;
-
 	if (new)
 	{
 		if (*lst)
@@ -25,4 +24,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 	}
 }
-
