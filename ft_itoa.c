@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/13 23:02:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/19 00:57:26 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:17:03 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ char	*ft_itoa(int n)
 	if (!tab)
 		return (NULL);
 	if (n < 0)
-		nb = nb * (-1);
+		nb = n * (-1);
 	while (nb > 0 && n != 0)
 	{
 		val = nb % 10;

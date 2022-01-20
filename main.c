@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:23:30 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/19 18:57:31 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:58:11 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,20 @@
 #include <string.h>
 #include <stdlib.h>
 
-void    display_and_free(char *str)
+int main () {
+   int len;
+   const char *str = NULL;
+   const char ch = 'b';
+   char *ret;
+
+   ret = strrchr(str, ch);
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+   
+   return(0);
+}
+
+/*void    display_and_free(char *str)
 {
     if (str)
         printf("%s\n", str);
@@ -27,13 +40,13 @@ void    display_and_free(char *str)
 int main(void)
 {
     char    *s1 = "xxxbxxx";
-    /*char    *s2 = "M";
+    char    *s2 = "M";
     char    *s3 = "+=+-=-+-=";
     char    *s4 = "0123some text 456 and some more789";
-    char    *s5 = "x";*/
+    char    *s5 = "x";
     //display_and_free(ft_strtrim(s1, "M"));
     display_and_free(ft_strtrim(s1, ""));
-    /*display_and_free(ft_strtrim(s1, "Ma"));
+    display_and_free(ft_strtrim(s1, "Ma"));
     display_and_free(ft_strtrim(s1, s1)); // OK
     display_and_free(ft_strtrim(s1, ""));
     display_and_free(ft_strtrim(s1, NULL));
@@ -46,9 +59,9 @@ int main(void)
     display_and_free(ft_strtrim(s5, s1));
     display_and_free(ft_strtrim(s5, s5));
     display_and_free(ft_strtrim(NULL, "0123456789"));
-    display_and_free(ft_strtrim(NULL, NULL));*/
+    display_and_free(ft_strtrim(NULL, NULL));
     return (0);
-}
+}*/
 
 //ft_substr
 /*int main(void)

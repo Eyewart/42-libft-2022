@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 20:18:16 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/18 23:39:38 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/20 12:49:22 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static char	*malloc_string(int len, char **tab_str, int j)
 	int		i;
 
 	i = 0;
-	str = malloc (sizeof(char) * (len + 1));
+	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 	{
 		while (i < j)
@@ -45,9 +45,20 @@ static char	*malloc_string(int len, char **tab_str, int j)
 			free(tab_str[i]);
 			i++;
 		}
+		free(tab_str);
 		return (0);
 	}
 	return (str);
+}
+
+static char	**malloc_tab(char **tab, char const *s, char c)
+{
+	char **tab_s;
+	
+	tab_s = malloc(sizeof(tab) * (size_tab(s, c) + 1));
+	if (!tab_s)
+		return (NULL);
+	return (tab_s);
 }
 
 static char	**run_split(char const *s, char c, int i, int j)
@@ -56,9 +67,7 @@ static char	**run_split(char const *s, char c, int i, int j)
 	char	**tab_strings;
 	int		k;
 
-	tab_strings = malloc(sizeof(tab_strings) * (size_tab(s, c) + 1));
-	if (!tab_strings)
-		return (NULL);
+	tab_strings = malloc_tab(tab_strings, s, c); 
 	while (s && s[i])
 	{
 		while (s[i] == c)
@@ -69,6 +78,8 @@ static char	**run_split(char const *s, char c, int i, int j)
 		if (str_l == 0)
 			break ;
 		tab_strings[j] = malloc_string(str_l, tab_strings, j);
+		if (!tab_strings[j])
+			return NULL;
 		k = 0;
 		while (k < str_l && str_l != 0)
 			*(tab_strings[j] + k++) = s[i++];
