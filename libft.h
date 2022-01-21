@@ -6,7 +6,7 @@
 /*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 15:50:18 by hrifi-la          #+#    #+#             */
-/*   Updated: 2022/01/19 16:56:43 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/21 15:20:50 by hrifi-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h> 
 
 typedef struct s_list
 {
