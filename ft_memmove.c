@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hrifi-la <hrifi-la@student.s19.be>         +#+  +:+       +#+        */
+/*   By: Hassan <hrifi-la@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 22:15:51 by Hassan            #+#    #+#             */
-/*   Updated: 2022/01/17 21:46:44 by hrifi-la         ###   ########.fr       */
+/*   Updated: 2022/01/21 12:24:01 by Hassan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void	*ft_memmove(void *dest, const void *src, size_t size)
 		return (dest);
 	ptr_d = (char *)dest;
 	ptr_s = (char *)src;
-	if (dest <= src)
+	if (dest < src)
 		return (ft_memcpy(ptr_d, ptr_s, size));
-	else
+	if (dest > src)
 	{
 		ptr_d = ptr_d + (size - 1);
 		ptr_s = ptr_s + (size - 1);
